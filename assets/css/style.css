@@ -262,7 +262,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #hero h1 {
   margin: 0;
-  font-size: 5.5rem;
+  font-size: 5rem;
   font-weight: 700;
   color: #45505b;
 }
@@ -280,7 +280,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 30px;
 }
 #hero .social-links a {
-  font-size: 3rem;
+  font-size: 2.8rem;
   display: inline-block;
   color: #45505b;
   line-height: 1;
@@ -544,11 +544,11 @@ section {
   position: relative;
   overflow: hidden;
   z-index: 1;
-  background: rgba(69, 80, 91, 0.8);
+  background: rgba(69, 80, 91, 0.9);
 }
 .portfolio .portfolio-wrap::before {
   content: "";
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.9);
   position: absolute;
   left: 30px;
   right: 30px;
@@ -608,7 +608,7 @@ section {
   color: #45505b;
   font-size: 14px;
   padding: 0;
-  margin: 0;
+  margin: 2rem;
 }
 .portfolio .portfolio-wrap .portfolio-links {
   text-align: center;
@@ -642,7 +642,6 @@ section {
   bottom: 15px;
   right: 15px;
 }
-
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
@@ -877,7 +876,6 @@ section {
 --------------------------------------------------------------*/
 .contact .info {
   width: 100%;
-  background: #fff;
 }
 .contact .info i {
   font-size: 20px;
@@ -891,6 +889,7 @@ section {
   align-items: center;
   border-radius: 50px;
   transition: all 0.3s ease-in-out;
+  border: 1px solid #0563bb;
 }
 .contact .info h4 {
   padding: 0 0 0 60px;
