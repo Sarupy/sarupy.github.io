@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>League Guessing</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+  </head>
+  <body>
+    <div class="modal" tabindex="-1" id="modalFim">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTitleFim"></h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p id="modalBodyFim"></p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              onclick="document.location.reload(true)"
+            >
+              Jogar denovo
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" tabindex="-1" id="modalErro">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalTitleFim">Erro</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p id="modalBodyFim">Você precisa selecionar um palpite.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <header>
+      <nav
+        class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3"
+      >
+        <div class="container d-flex justify-content-center">
+          <a
+            class="navbar-brand fs-3"
+            asp-area=""
+            asp-controller="Home"
+            asp-action="Index"
+            >Quem é o campeão?</a
+          >
+        </div>
+      </nav>
+    </header>
+    <div class="container" style="max-width: 1140px !important">
+      <main role="main" class="pb-3">
+        <div class="bg-dark mx-auto mb-4" style="border-radius: 15px">
+          <img id="championPicture" style="width: 100%" />
+        </div>
+        <div class="row">
+          <input type="hidden" id="championName" />
+          <div class="mb-3 mb-md-0 col-12 col-md-7">
+            <div class="input-group">
+              <label class="input-group-text fs-5" for="championSelect"
+                >Escolha seu palpite:</label
+              >
+              <select
+                required
+                asp-for="Guessing"
+                class="form-select form-select-lg"
+                id="championSelect"
+                aria-label=".form-select-lg"
+                asp-items="@Model.Champions"
+              ></select>
+            </div>
+          </div>
+          <div class="d-grid col-12 col-md-5">
+            <button
+              class="btn btn-secondary btn-lg"
+              type="button"
+              id="confirmar"
+              onclick="validaPalpite()"
+            >
+              Confirmar
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
