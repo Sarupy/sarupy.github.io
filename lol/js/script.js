@@ -20,7 +20,7 @@ window.onload = function() {
     }
 
 
-    championPicture.attr("src","lol/images/" + randomChampionName +"_0.jpg");
+    championPicture.attr("src","images/" + randomChampionName +"_0.jpg");
     championPicture.on('dragstart', function(event) { event.preventDefault(); });
     championPicture.css('clip-path', 'circle(10% at ' + randomX + '% ' + randomY + '%)');
 
