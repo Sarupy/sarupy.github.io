@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="modal" tabindex="-1" id="resultModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Modal body text goes here.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <nav class="navbar bg-light shadow-sm">
+        <div class="container">
+          <a class="navbar-brand lead"><span class="fs-5" ><i class="bi bi-calculator" ></i></span> <span class="fs-4" style="margin-top:5px"> Calculadora de ponto</span></a>
+          <div>
+            Caique Santos &nbsp; <a href="https://www.instagram.com/oisarupy"><i class="bi bi-instagram"></i></a> &nbsp; <a href="https://www.linkedin.com/in/caiques/"><i class="bi bi-linkedin"></i></a> &nbsp; <a href="https://github.com/sarupy"><i class="bi bi-github"></i></a>
+          </div>
+        </div>
+      </nav>
+    <div class="container p-5 text-center">
+        <div class="pb-4">
+            <h1 class="fw-400 pb-3"><span class="display-5">Calcule a hora exata da sua saída</span></h1>
+            <div style="width:800px" class="mx-auto">
+            <p class="lead">
+                Um aplicativo para calcular o horário de saída do expediente beaseado nos registros de ponto anteriores e na carga horária diária. Insira abaixo as informações necessárias para o cálculo.</p>
+            </div>
+        </div>
+        <hr>
+        <form onsubmit="return false">
+            <div class="col mb-4">
+                <div class="row" > 
+                    <div class="col-12 col-md-6">
+                    <div class="mx-auto pt-4" style="width: 255px;">
+                        <div class="form-check pt-2">
+                            <input class="form-check-input" type="radio" name="radioCarga" id="padrao" value="padrao" checked onclick="document.getElementById('cargaHoraria').setAttribute('disabled', '');document.getElementById('cargaHoraria').value = '--:--';document.getElementById('cargaHoraria').removeAttribute('required')">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                              Usar carga horária de <b>8 horas</b>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radioCarga" id="personalizado" value="personalizado" onclick="document.getElementById('cargaHoraria').removeAttribute('disabled');document.getElementById('cargaHoraria').setAttribute('required', '')">
+                            <label class="form-check-label" for="flexRadioDefault2" >
+                                Usar carga horária personalizada
+                            </label>
+                        </div>
+                    </div>   
+                </div> 
+                    <div class="col-12 col-md-6 text-center">
+                        <div class="mb-2 w-100 px-4">
+                            <label for="exampleFormControlInput1" class="form-label lead">Carga horária diária:</label>
+                            <div class="cell mx-auto pb-2 px-4">
+                            <input type="time" class="form-control form-control-lg fs-2" id="cargaHoraria" disabled >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="mb-3 w-100">
+                            <label for="exampleFormControlInput1" class="form-label lead">Início do expediente:</label>
+                            <div class="cell mx-auto pb-4 px-4">
+                            <input type="time" class="form-control form-control-lg fs-2" id="inicioExpediente" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="mb-3 w-100">
+                            <label for="exampleFormControlInput1" class="form-label lead">Início do almoço:</label>
+                            <div class="cell mx-auto pb-4 px-4">
+                            <input type="time" class="form-control form-control-lg fs-2" id="inicioAlmoco" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="mb-3 w-100">
+                            <label for="exampleFormControlInput1" class="form-label lead">Fim do almoço:</label>
+                            <div class="cell mx-auto pb-4 px-4">
+                            <input type="time" class="form-control form-control-lg fs-2" id="fimAlmoco" required >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="mb-3 w-100">
+                            <label for="exampleFormControlInput1" class="form-label lead">Fim do Expediente</label>
+                            <div class="cell mx-auto pb-4 px-4">
+                            <input type="time" class="form-control form-control-lg fs-2" id="fimExpediente" disabled  >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <button  class="btn btn-dark btn-lg" value="Calcular saída" onclick="calcular()">Calcular Saída &nbsp; <i class="bi bi-fast-forward"></i></button>
+            </div>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>  
+</body>
+</html>
