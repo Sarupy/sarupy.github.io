@@ -1,0 +1,78 @@
+body{
+    font-family: 'Merriweather Sans', sans-serif;
+    background-image: linear-gradient(to right,white 70%, #fff0fe 75%);
+}
+
+.header-title{
+    font-family: 'Acme', sans-serif;
+}
+
+td,tr,th{
+    border:1px solid white;
+    border-collapse: collapse;
+    cursor:all-scroll;
+}
+
+table{
+border-collapse: collapse;
+-webkit-user-select: none; /* Safari */
+-ms-user-select: none; /* IE 10+ and Edge */
+user-select: none; /* Standard syntax */
+}
+
+.flag-icon{
+    height: 24px;
+}
+
+.w-1{
+    width: 50px;
+}
+
+.griple-icon{
+    float: right;
+    fill: rgba(0, 0, 0, 0.5);
+    margin-top: 4px;
+}
+.btn-qatar {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #730530;
+    --bs-btn-border-color: #730530;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #530423;
+    --bs-btn-hover-border-color: #530423;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #530423;
+    --bs-btn-active-border-color: #730530;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #730530;
+    --bs-btn-disabled-border-color: #730530;
+    /* cursor: not-allowed !important; */
+  }
+
+  /* .btn-qatar:disabled {
+    cursor: not-allowed;
+    pointer-events: all !important;
+  } */
+
+  .alert-qatar {
+    --bs-alert-color: #4d0c28;
+    --bs-alert-bg: #f0b6cf;
+    --bs-alert-border-color: #d99cb6;
+    font-weight: 300 !important;
+    font-size: 0.9rem !important;
+  }
+
+  .alert-qatar .alert-link {
+    color: white;
+  }
+
+  .qatar-bg-color{
+    background-color: #630020 !important;
+  }
+
+  .qatar-muted{
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-size: 0.8rem;
+  }
