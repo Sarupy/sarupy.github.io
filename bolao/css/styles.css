@@ -10,7 +10,7 @@ body{
 td,tr,th{
     border:1px solid white;
     border-collapse: collapse;
-    cursor:all-scroll;
+    cursor:grab;
 }
 
 table{
