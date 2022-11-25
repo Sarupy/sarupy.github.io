@@ -35,19 +35,19 @@ user-select: none; /* Standard syntax */
 }
 .btn-qatar {
     --bs-btn-color: #fff;
-    --bs-btn-bg: #730530;
-    --bs-btn-border-color: #730530;
+    --bs-btn-bg: #730540;
+    --bs-btn-border-color: #730540;
     --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #530423;
-    --bs-btn-hover-border-color: #530423;
+    --bs-btn-hover-bg: #530433;
+    --bs-btn-hover-border-color: #530433;
     --bs-btn-focus-shadow-rgb: 49, 132, 253;
     --bs-btn-active-color: #fff;
-    --bs-btn-active-bg: #530423;
-    --bs-btn-active-border-color: #730530;
+    --bs-btn-active-bg: #530433;
+    --bs-btn-active-border-color: #730540;
     --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
     --bs-btn-disabled-color: #fff;
-    --bs-btn-disabled-bg: #730530;
-    --bs-btn-disabled-border-color: #730530;
+    --bs-btn-disabled-bg: #730540;
+    --bs-btn-disabled-border-color: #730540;
     /* cursor: not-allowed !important; */
   }
 
@@ -57,9 +57,9 @@ user-select: none; /* Standard syntax */
   } */
 
   .alert-qatar {
-    --bs-alert-color: #4d0c28;
-    --bs-alert-bg: #f0b6cf;
-    --bs-alert-border-color: #d99cb6;
+    --bs-alert-color: #4d0c38;
+    --bs-alert-bg: #f0b6df;
+    --bs-alert-border-color: #d99cc6;
     font-weight: 300 !important;
     font-size: 0.9rem !important;
   }
@@ -69,7 +69,7 @@ user-select: none; /* Standard syntax */
   }
 
   .qatar-bg-color{
-    background-color: #630020 !important;
+    background-color: #630030 !important;
   }
 
   .qatar-muted{
