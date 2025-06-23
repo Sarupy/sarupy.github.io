@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Detetive</title>
   <style>
     body {
@@ -12,9 +12,7 @@
       padding: 0;
       background-color: #f4f4f4;
     }
-    input[type="checkbox"]:checked {
-      accent-color: #5d4; /* funciona em navegadores modernos */
-    }
+
     .tabs {
       display: flex;
       justify-content: space-around;
@@ -28,6 +26,7 @@
       border: none;
       color: white;
       font-size: 1em;
+      cursor: pointer;
     }
 
     .tabs button.active {
@@ -51,7 +50,7 @@
     .checklist li {
       margin-left: 1em;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       border-bottom: 1px solid #ccc;
     }
 
@@ -61,17 +60,34 @@
     }
 
     .c2 li {
-       margin-bottom: 1.1em;
+      margin-bottom: 1.1em;
       padding-bottom: 1.1em;
     }
 
-    .checklist input[type="checkbox"] {
-      margin-right: 0.5em;
+    .checkbox-state {
+      width: 1.5em;
+      height: 1.5em;
+      font-size: 1.5em;
+      text-align: center;
+      line-height: 1.5em;
+      border: 2px solid #333;
+      border-radius: 4px;
+      cursor: pointer;
+      user-select: none;
+      margin: 0 1em;
+      flex-shrink: 0;
     }
-    .checklist input[type="checkbox"] {
-      transform: scale(2.5); /* aumenta o tamanho */
-      margin-right: 2em;
-      margin-left: 2em;
+
+    .checkbox-state.checked {
+      background-color: #5d4;
+    }
+
+    .checkbox-state.question {
+      background-color: #ffc;
+    }
+
+    .hint {
+      font-weight: 400;
     }
 
     @media (max-width: 600px) {
@@ -80,10 +96,6 @@
         padding: 0.8em;
       }
     }
-    .hint{
-      font-weight: 400;
-    }
-
   </style>
 </head>
 <body>
@@ -97,97 +109,66 @@
   <div class="tab-content active" id="tab-0">
     <ul class="checklist c1">
       <li>
-  <input type="checkbox">
-  <div>
-    Sargento - Bigode<br>
-    <span class="hint">Cor do peão - Amarelo</span>
-  </div>
-</li>
-
+        <div class="checkbox-state" onclick="toggleState(this)"></div>
+        <div>Sargento - Bigode<br><span class="hint">Cor do peão - Amarelo</span></div>
+      </li>
       <li>
-  <input type="checkbox">
-  <div>
-    Florista - Dona Branca<br>
-    <span class="hint">Cor do peão - Branco</span>
-  </div>
-</li>
-
+        <div class="checkbox-state" onclick="toggleState(this)"></div>
+        <div>Florista - Dona Branca<br><span class="hint">Cor do peão - Branco</span></div>
+      </li>
       <li>
-  <input type="checkbox">
-  <div>
-    Chef - Tony Gourmet<br>
-    <span class="hint">Cor do peão - Marrom</span>
-  </div>
-</li>
-
+        <div class="checkbox-state" onclick="toggleState(this)"></div>
+        <div>Chef - Tony Gourmet<br><span class="hint">Cor do peão - Marrom</span></div>
+      </li>
       <li>
-  <input type="checkbox">
-  <div>
-    Mordomo - James<br>
-    <span class="hint">Cor do peão - Azul</span>
-  </div>
-</li>
-
+        <div class="checkbox-state" onclick="toggleState(this)"></div>
+        <div>Mordomo - James<br><span class="hint">Cor do peão - Azul</span></div>
+      </li>
       <li>
-  <input type="checkbox">
-  <div>
-    Médica - Dona Violeta<br>
-    <span class="hint">Cor do peão - Rosa</span>
-  </div>
-</li>
-
+        <div class="checkbox-state" onclick="toggleState(this)"></div>
+        <div>Médica - Dona Violeta<br><span class="hint">Cor do peão - Rosa</span></div>
+      </li>
       <li>
-  <input type="checkbox">
-  <div>
-    Dançarina - Srta. Rosa<br>
-    <span class="hint">Cor do peão - Vermelho</span>
-  </div>
-</li>
-
+        <div class="checkbox-state" onclick="toggleState(this)"></div>
+        <div>Dançarina - Srta. Rosa<br><span class="hint">Cor do peão - Vermelho</span></div>
+      </li>
       <li>
-  <input type="checkbox">
-  <div>
-    Coveiro - Sérgio Soturno<br>
-    <span class="hint">Cor do peão - Preto</span>
-  </div>
-</li>
-
+        <div class="checkbox-state" onclick="toggleState(this)"></div>
+        <div>Coveiro - Sérgio Soturno<br><span class="hint">Cor do peão - Preto</span></div>
+      </li>
       <li>
-  <input type="checkbox">
-  <div>
-    Advogado - Sr. Marinho<br>
-    <span class="hint">Cor do peão - Verde</span>
-  </div>
-</li>
+        <div class="checkbox-state" onclick="toggleState(this)"></div>
+        <div>Advogado - Sr. Marinho<br><span class="hint">Cor do peão - Verde</span></div>
+      </li>
     </ul>
   </div>
 
   <div class="tab-content" id="tab-1">
     <ul class="checklist c2">
-      <li><input type="checkbox"> ESPINGARDA</li>
-      <li><input type="checkbox"> PÁ</li>
-      <li><input type="checkbox"> PÉ DE CABRA</li>
-      <li><input type="checkbox"> TESOURA</li>
-      <li><input type="checkbox"> ARMA QUÍMICA</li>
-      <li><input type="checkbox"> VENENO</li>
-      <li><input type="checkbox"> SOCO INGLÊS</li>
-      <li><input type="checkbox"> FACA</li>
+      <li><div class="checkbox-state" onclick="toggleState(this)"></div>ESPINGARDA</li>
+      <li><div class="checkbox-state" onclick="toggleState(this)"></div>PÁ</li>
+      <li><div class="checkbox-state" onclick="toggleState(this)"></div>PÉ DE CABRA</li>
+      <li><div class="checkbox-state" onclick="toggleState(this)"></div>TESOURA</li>
+      <li><div class="checkbox-state" onclick="toggleState(this)"></div>ARMA QUÍMICA</li>
+      <li><div class="checkbox-state" onclick="toggleState(this)"></div>VENENO</li>
+      <li><div class="checkbox-state" onclick="toggleState(this)"></div>SOCO INGLÊS</li>
+      <li><div class="checkbox-state" onclick="toggleState(this)"></div>FACA</li>
     </ul>
   </div>
 
   <div class="tab-content" id="tab-2">
     <ul class="checklist c2">
-      <li><input type="checkbox"> PREFEITURA</li>
-      <li><input type="checkbox"> RESTAURANTE</li>
-      <li><input type="checkbox"> FLORICULTURA</li>
-      <li><input type="checkbox"> BOATE</li>
-      <li><input type="checkbox"> HOSPITAL</li>
-      <li><input type="checkbox"> MANSÃO</li>
-      <li><input type="checkbox"> CEMITÉRIO</li>
-      <li><input type="checkbox"> PRAÇA</li>
-      <li><input type="checkbox"> HOTEL</li>
-      <li><input type="checkbox"> BANCO</li>
-      <li><input type="checkbox"> ESTAÇÃO DE TREM</li>
+      <li><div class="checkbox-state" onclick="toggleState(this)"></div>PREFEITURA</li>
+      <li><div class="checkbox-state" onclick="toggleState(this)"></div>RESTAURANTE</li>
+      <li><div class="checkbox-state" onclick="toggleState(this)"></div>FLORICULTURA</li>
+      <li><div class="checkbox-state" onclick="toggleState(this)"></div>BOATE</li>
+      <li><div class="checkbox-state" onclick="toggleState(this)"></div>HOSPITAL</li>
+      <li><div class="checkbox-state" onclick="toggleState(this)"></div>MANSÃO</li>
+      <li><div class="checkbox-state" onclick="toggleState(this)"></div>CEMITÉRIO</li>
+      <li><div class="checkbox-state" onclick="toggleState(this)"></div>PRAÇA</li>
+      <li><div class="checkbox-state" onclick="toggleState(this)"></div>HOTEL</li>
+      <li><div class="checkbox-state" onclick="toggleState(this)"></div>BANCO</li>
+      <li><div class="checkbox-state" onclick="toggleState(this)"></div>ESTAÇÃO DE TREM</li>
     </ul>
   </div>
 
@@ -199,6 +180,21 @@
         tab.classList.toggle('active', i === index);
         buttons[i].classList.toggle('active', i === index);
       });
+    }
+
+    function toggleState(el) {
+      if (el.classList.contains("unchecked") || !el.classList.contains("checked") && !el.classList.contains("question")) {
+        el.classList.remove("question");
+        el.classList.add("checked");
+        el.textContent = "✔";
+      } else if (el.classList.contains("checked")) {
+        el.classList.remove("checked");
+        el.classList.add("question");
+        el.textContent = "?";
+      } else {
+        el.classList.remove("question");
+        el.textContent = "";
+      }
     }
   </script>
 
