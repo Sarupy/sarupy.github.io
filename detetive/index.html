@@ -14,10 +14,11 @@
       margin: 0;
       padding: 0;
       background-color: #fff;
+      height: 100%;
     }
       body::before {
       content: "";
-      position: absolute;
+      position: fixed;
       inset: 0;
       background-image: url("images/cartographer.png");
       background-size: 200px 200px;        /* Define o tamanho da imagem (largura x altura) */
@@ -32,7 +33,16 @@
       position: fixed;
       display: flex;
       justify-content: space-around;
-      background-color: #390;
+
+      /* Imagem de fundo igual à do body */
+      background-image: url("images/cartographer.png");
+      background-size: 200px 200px;
+      background-repeat: repeat;
+      background-position: top left;
+
+      /* Sobreposição de cor com transparência (simula a opacidade) */
+      background-color: rgba(51, 136, 0, 0.8); /* equivalente a #380 com 80% opacidade */
+
       height: 3.8em;
     }
 
@@ -47,7 +57,7 @@
     }
 
     .tabs button.active {
-      background-color: #4a1;
+      background-color: rgba(91, 166, 30, 0.4);
     }
 
     .tab-content {
@@ -97,7 +107,7 @@
 
     .checkbox-state.checked {
       background-image: 
-        repeating-linear-gradient(45deg, black 0, black 1px, rgba(0,0,0,0.0) 1px, rgba(0,0,0,0.0) 2px);
+        repeating-linear-gradient(45deg, black 0, black 1px, transparent 1px, transparent 2px);
       background-size: 1.5em;
     }
 
