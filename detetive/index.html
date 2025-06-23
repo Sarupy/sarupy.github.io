@@ -17,7 +17,7 @@
     .tabs {
       display: flex;
       justify-content: space-around;
-      background-color: #190;
+      background-color: #390;
     }
 
     .tabs button {
@@ -31,7 +31,7 @@
     }
 
     .tabs button.active {
-      background-color: #2a1;
+      background-color: #4a1;
     }
 
     .tab-content {
@@ -80,7 +80,7 @@
     }
 
     .checkbox-state.checked {
-      background-color: #8a7;
+      background-color: #674;
     }
 
     .checkbox-state.question {
@@ -187,7 +187,7 @@
       if (el.classList.contains("unchecked") || !el.classList.contains("checked") && !el.classList.contains("question")) {
         el.classList.remove("question");
         el.classList.add("checked");
-        el.textContent = "✖";
+        el.textContent = "▒▒";
       } else if (el.classList.contains("checked")) {
         el.classList.remove("checked");
         el.classList.add("question");
