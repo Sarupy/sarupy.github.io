@@ -17,7 +17,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background-image: url("/images/cartographer.png");
+      background-image: url("detetive/images/cartographer.png");
       background-size: 200px 200px;        /* Define o tamanho da imagem (largura x altura) */
       background-repeat: repeat;         /* Repete horizontal e verticalmente */
       background-position: top left;     /* Começa do topo esquerdo */
@@ -76,15 +76,15 @@
     .c2 li {
       margin-bottom: .7em;
       padding-bottom: .7em;
-      line-height: 2.5em;
+      line-height: 2.3em;
     }
 
     .checkbox-state {
-      width: 1.2em;
-      height: 1.2em;
-      font-size: 1.8em;
+      width: 1.4em;
+      height: 1.4em;
+      font-size: 1.3em;
       text-align: center;
-      line-height: 1.2em;
+      line-height: 1.4em;
       border: 2px solid #444;
       border-radius: 4px;
       cursor: pointer;
@@ -94,12 +94,12 @@
     }
 
     .checkbox-state.checked {
-      background-color: #6c3;
+      background-color: rgba(81, 114, 64, 0.3);
     }
 
-    .checkbox-state.question {
-      background-color: #ffc;
-    }
+    /* .checkbox-state.question {
+      background-color: rgba(243, 226, 134, 0.3);
+    } */
 
     .hint {
       font-weight: 400;
@@ -201,7 +201,7 @@
       if (el.classList.contains("unchecked") || !el.classList.contains("checked") && !el.classList.contains("question")) {
         el.classList.remove("question");
         el.classList.add("checked");
-        el.textContent = "✗";
+        el.textContent = "▒▒";
       } else if (el.classList.contains("checked")) {
         el.classList.remove("checked");
         el.classList.add("question");
