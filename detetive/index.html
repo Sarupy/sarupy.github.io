@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Checklist com Abas</title>
+  <title>Detetive</title>
   <style>
     body {
       font-family: sans-serif;
@@ -47,9 +47,19 @@
     }
 
     .checklist li {
-      margin-bottom: 0.5em;
+      margin-left: 1em;
       display: flex;
       align-items: center;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .c1 li {
+      margin-bottom: .8em;
+      padding-bottom: .8em;
+    }
+
+    .c2 li {
+      margin-bottom: 2em;
     }
 
     .checklist input[type="checkbox"] {
@@ -58,6 +68,7 @@
     .checklist input[type="checkbox"] {
       transform: scale(2.5); /* aumenta o tamanho */
       margin-right: 2em;
+      margin-left: 2em;
     }
 
     @media (max-width: 600px) {
@@ -81,7 +92,7 @@
   </div>
 
   <div class="tab-content active" id="tab-0">
-    <ul class="checklist">
+    <ul class="checklist c1">
       <li>
   <input type="checkbox">
   <div>
@@ -101,41 +112,68 @@
       <li>
   <input type="checkbox">
   <div>
-    Item 3<br>
+    Chef - Tony Gourmet<br>
+    <span class="hint">Cor do peão - Marrom</span>
+  </div>
+</li>
+
+      <li>
+  <input type="checkbox">
+  <div>
+    Mordomo - James<br>
     <span class="hint">Cor do peão - Azul</span>
   </div>
 </li>
-      <li><input type="checkbox"> Item 4</li>
-      <li><input type="checkbox"> Item 5</li>
-      <li><input type="checkbox"> Item 6</li>
-      <li><input type="checkbox"> Item 7</li>
-      <li><input type="checkbox"> Item 8</li>
-      <li><input type="checkbox"> Item 9</li>
-      <li><input type="checkbox"> Item 10</li>
-      <li><input type="checkbox"> Item 11</li>
-      <li><input type="checkbox"> Item 12</li>
+
+      <li>
+  <input type="checkbox">
+  <div>
+    Médica - Dona Violeta<br>
+    <span class="hint">Cor do peão - Rosa</span>
+  </div>
+</li>
+
+      <li>
+  <input type="checkbox">
+  <div>
+    Dançarina - Srta. Rosa<br>
+    <span class="hint">Cor do peão - Vermelho</span>
+  </div>
+</li>
+
+      <li>
+  <input type="checkbox">
+  <div>
+    Coveiro - Sérgio Soturno<br>
+    <span class="hint">Cor do peão - Preto</span>
+  </div>
+</li>
+
+      <li>
+  <input type="checkbox">
+  <div>
+    Advogado - Sr. Marinho<br>
+    <span class="hint">Cor do peão - Verde</span>
+  </div>
+</li>
     </ul>
   </div>
 
   <div class="tab-content" id="tab-1">
-    <ul class="checklist">
-      <li><input type="checkbox"> Item 13</li>
-      <li><input type="checkbox"> Item 14</li>
-      <li><input type="checkbox"> Item 15</li>
-      <li><input type="checkbox"> Item 16</li>
-      <li><input type="checkbox"> Item 17</li>
-      <li><input type="checkbox"> Item 18</li>
-      <li><input type="checkbox"> Item 19</li>
-      <li><input type="checkbox"> Item 20</li>
-      <li><input type="checkbox"> Item 21</li>
-      <li><input type="checkbox"> Item 22</li>
-      <li><input type="checkbox"> Item 23</li>
-      <li><input type="checkbox"> Item 24</li>
+    <ul class="checklist c2">
+      <li><input type="checkbox"> ESPINGARDA</li>
+      <li><input type="checkbox"> PÁ</li>
+      <li><input type="checkbox"> PÉ DE CABRA</li>
+      <li><input type="checkbox"> TESOURA</li>
+      <li><input type="checkbox"> ARMA QUÍMICA</li>
+      <li><input type="checkbox"> VENENO</li>
+      <li><input type="checkbox"> SOCO INGLÊS</li>
+      <li><input type="checkbox"> FACA</li>
     </ul>
   </div>
 
   <div class="tab-content" id="tab-2">
-    <ul class="checklist">
+    <ul class="checklist c2">
       <li><input type="checkbox"> Item 25</li>
       <li><input type="checkbox"> Item 26</li>
       <li><input type="checkbox"> Item 27</li>
