@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Detetive</title>
+  <meta name="theme-color" content="#390">
+
   <style>
     body {
       font-family: sans-serif;
@@ -94,7 +96,9 @@
     }
 
     .checkbox-state.checked {
-      background-color: rgba(50, 50, 50, 0.1);
+      background-image: 
+        repeating-linear-gradient(45deg, black 0, black 1px, rgba(0,0,0,0.0) 1px, rgba(0,0,0,0.0) 2px);
+      background-size: 1.5em;
     }
 
     /* .checkbox-state.question {
@@ -201,7 +205,7 @@
       if (el.classList.contains("unchecked") || !el.classList.contains("checked") && !el.classList.contains("question")) {
         el.classList.remove("question");
         el.classList.add("checked");
-        el.textContent = "▒▒";
+        el.textContent = "";
       } else if (el.classList.contains("checked")) {
         el.classList.remove("checked");
         el.classList.add("question");
