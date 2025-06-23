@@ -11,14 +11,27 @@
       color: #444;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
+      background-color: #fff;
+    }
+      body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url("/images/cartographer.png");
+      background-size: 200px 200px;        /* Define o tamanho da imagem (largura x altura) */
+      background-repeat: repeat;         /* Repete horizontal e verticalmente */
+      background-position: top left;     /* Começa do topo esquerdo */
+      opacity: 0.5; /* ajuste aqui */
+      z-index: -1;
     }
 
     .tabs {
+      width: 100%;
+      position: fixed;
       display: flex;
       justify-content: space-around;
       background-color: #390;
-      height: 4em;
+      height: 3.8em;
     }
 
     .tabs button {
@@ -37,7 +50,7 @@
 
     .tab-content {
       display: none;
-      padding: 1em;
+      padding: 4.2em 1em 1em 1em;
     }
 
     .tab-content.active {
@@ -52,7 +65,7 @@
     .checklist li {
       display: flex;
       align-items: flex-start;
-      border-bottom: 1px solid #ccc;
+      border-bottom: 1px solid #888;
     }
 
     .c1 li {
@@ -61,8 +74,8 @@
     }
 
     .c2 li {
-      margin-bottom: .75em;
-      padding-bottom: .75em;
+      margin-bottom: .7em;
+      padding-bottom: .7em;
       line-height: 2.5em;
     }
 
@@ -72,7 +85,7 @@
       font-size: 1.8em;
       text-align: center;
       line-height: 1.2em;
-      border: 2px solid #555;
+      border: 2px solid #444;
       border-radius: 4px;
       cursor: pointer;
       user-select: none;
