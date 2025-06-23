@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checklist com Abas</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: space-around;
+      background-color: #333;
+    }
+
+    .tabs button {
+      flex: 1;
+      padding: 1em;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1em;
+    }
+
+    .tabs button.active {
+      background-color: #555;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 1em;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .checklist {
+      list-style: none;
+      padding: 0;
+    }
+
+    .checklist li {
+      margin-bottom: 0.5em;
+      display: flex;
+      align-items: center;
+    }
+
+    .checklist input[type="checkbox"] {
+      margin-right: 0.5em;
+    }
+    .checklist input[type="checkbox"] {
+      transform: scale(2.5); /* aumenta o tamanho */
+      margin-right: 2em;
+    }
+
+    @media (max-width: 600px) {
+      .tabs button {
+        font-size: 0.9em;
+        padding: 0.8em;
+      }
+    }
+    .hint{
+      font-weight: 400;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="tabs">
+    <button class="active" onclick="showTab(0)">SUSPEITOS</button>
+    <button onclick="showTab(1)">ARMAS</button>
+    <button onclick="showTab(2)">LOCAIS</button>
+  </div>
+
+  <div class="tab-content active" id="tab-0">
+    <ul class="checklist">
+      <li>
+  <input type="checkbox">
+  <div>
+    Sargento - Bigode<br>
+    <span class="hint">Cor do peão - Amarelo</span>
+  </div>
+</li>
+
+      <li>
+  <input type="checkbox">
+  <div>
+    Florista - Dona Branca<br>
+    <span class="hint">Cor do peão - Branco</span>
+  </div>
+</li>
+
+      <li>
+  <input type="checkbox">
+  <div>
+    Item 3<br>
+    <span class="hint">Cor do peão - Azul</span>
+  </div>
+</li>
+      <li><input type="checkbox"> Item 4</li>
+      <li><input type="checkbox"> Item 5</li>
+      <li><input type="checkbox"> Item 6</li>
+      <li><input type="checkbox"> Item 7</li>
+      <li><input type="checkbox"> Item 8</li>
+      <li><input type="checkbox"> Item 9</li>
+      <li><input type="checkbox"> Item 10</li>
+      <li><input type="checkbox"> Item 11</li>
+      <li><input type="checkbox"> Item 12</li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="tab-1">
+    <ul class="checklist">
+      <li><input type="checkbox"> Item 13</li>
+      <li><input type="checkbox"> Item 14</li>
+      <li><input type="checkbox"> Item 15</li>
+      <li><input type="checkbox"> Item 16</li>
+      <li><input type="checkbox"> Item 17</li>
+      <li><input type="checkbox"> Item 18</li>
+      <li><input type="checkbox"> Item 19</li>
+      <li><input type="checkbox"> Item 20</li>
+      <li><input type="checkbox"> Item 21</li>
+      <li><input type="checkbox"> Item 22</li>
+      <li><input type="checkbox"> Item 23</li>
+      <li><input type="checkbox"> Item 24</li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="tab-2">
+    <ul class="checklist">
+      <li><input type="checkbox"> Item 25</li>
+      <li><input type="checkbox"> Item 26</li>
+      <li><input type="checkbox"> Item 27</li>
+      <li><input type="checkbox"> Item 28</li>
+      <li><input type="checkbox"> Item 29</li>
+      <li><input type="checkbox"> Item 30</li>
+      <li><input type="checkbox"> Item 31</li>
+      <li><input type="checkbox"> Item 32</li>
+      <li><input type="checkbox"> Item 33</li>
+      <li><input type="checkbox"> Item 34</li>
+      <li><input type="checkbox"> Item 35</li>
+      <li><input type="checkbox"> Item 36</li>
+    </ul>
+  </div>
+
+  <script>
+    function showTab(index) {
+      const tabs = document.querySelectorAll('.tab-content');
+      const buttons = document.querySelectorAll('.tabs button');
+      tabs.forEach((tab, i) => {
+        tab.classList.toggle('active', i === index);
+        buttons[i].classList.toggle('active', i === index);
+      });
+    }
+  </script>
+
+</body>
+</html>
