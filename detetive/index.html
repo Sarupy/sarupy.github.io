@@ -12,16 +12,18 @@
       padding: 0;
       background-color: #f4f4f4;
     }
-
+    input[type="checkbox"]:checked {
+      accent-color: #5d4; /* funciona em navegadores modernos */
+    }
     .tabs {
       display: flex;
       justify-content: space-around;
-      background-color: #333;
+      background-color: #190;
     }
 
     .tabs button {
       flex: 1;
-      padding: 1em;
+      padding: 1.2em 1em;
       background: none;
       border: none;
       color: white;
@@ -29,7 +31,7 @@
     }
 
     .tabs button.active {
-      background-color: #555;
+      background-color: #2a1;
     }
 
     .tab-content {
